@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # airspot
 
 > an air quality app
@@ -21,4 +21,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 # AirSpot
 
 ### a really simple air quality SPA prototype.
->>>>>>> 4c5515d6297009e2fef090ea0831a618794f3ba7
+
