@@ -5,13 +5,8 @@ import VueResource from 'vue-resource';
 import Vuetify from 'vuetify'
 
 
-
-
-
 Vue.use(VueResource);
 Vue.use(Vuetify);
-
-
 
 
 new Vue({

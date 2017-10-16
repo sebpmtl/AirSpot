@@ -1,6 +1,7 @@
 
 <template>
   <v-app id="previsions">
+    <v-container>
     <v-toolbar>
       <v-toolbar-title>AirSpot</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -9,6 +10,7 @@
         fa fa-refresh fa-2x
       </v-icon>
     </v-toolbar>
+    
     <main>
       <v-content>
         <v-card>
@@ -42,7 +44,8 @@
             <v-flex xs6>
               <v-card-media>
                 <v-layout justify-space-around>
-                  <v-icon x-large class="pt-4" style="font-size:80px">fa-globe</v-icon>
+                  <v-icon x-large class="pt-4" 
+                  style="font-size:80px">fa-globe</v-icon>
                 </v-layout>
 
               </v-card-media>
@@ -67,7 +70,7 @@
           </v-layout>
         </v-card>
 
-        <div class="text-xs-center">
+        <div class="text-xs-center legend">
           <v-btn small color="green">
             <b>1-25</b>
           </v-btn>
@@ -81,7 +84,7 @@
 
       </v-content>
     </main>
-
+    </v-container>
   </v-app>
 </template>
 
@@ -95,10 +98,10 @@ export default {
       month: '',
       day: '',
       year: '',
-      north: '',
-      down: '',
-      east: '',
-      west: '',
+      north: 'unavailable',
+      down: 'unavailable',
+      east: 'unavailable',
+      west: 'unavailable',
       hour: '',
       aqiDef: 'The AQI is an index for reporting daily air quality. It tells you how clean or polluted your air is and what associated health effects.',
 
@@ -154,6 +157,7 @@ export default {
       this.$http.get('https://cors-anywhere.herokuapp.com/http://ville.montreal.qc.ca/rsqa/servlet/makeXmlActuel').then(response => {
 
         this.toJSON(response.body);
+
       }, response => {
 
         throw new Error("Couldn't load document.");
@@ -186,9 +190,6 @@ export default {
       this.east = east;
       this.west = west;
       this.hour = hourEng;
-      console.log(conv);
-      console.log(issued);
-      console.log(hourEng);
 
     },
 
@@ -203,6 +204,7 @@ export default {
 }
 
 </script>
+
 <style lang="css" scoped>
 .bareme1 {
   color: green;
@@ -214,5 +216,8 @@ export default {
 
 .bareme3 {
   color: red;
+}
+.btn{
+ margin: 10px 0px;
 }
 </style>
