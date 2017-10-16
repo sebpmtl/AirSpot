@@ -1,7 +1,9 @@
 
 # airspot
 
-> an air quality app
+> a really simple air quality SPA prototype
+
+
 
 ## Build Setup
 
@@ -17,8 +19,5 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
-=======
-# AirSpot
 
-### a really simple air quality SPA prototype.
 
